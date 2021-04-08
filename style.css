@@ -1,0 +1,23 @@
+@media (min-width: 30em) {
+  body{
+    width: 60%;
+  }
+}
+@media (min-width: 50em) {
+  body{
+    width: 40%;
+  }
+}
+@media (min-width: 75em) {
+  body{
+    width: 25%;
+  }
+}
+body{
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+}
+h1{
+  font-weight: 100;
+}
