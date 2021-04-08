@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+body{
+  background-color: black;
+  color: white;
+}
+h1{
+  font-family: indie flower;
+  width: 95%;
+  margin: auto;
+  text-align:center;
+  font-size: .9em;
+  letter-spacing: 1em;
+  padding: 2em 0 2em 0;
+}
