@@ -1,2 +1,2 @@
 # virtual-inst
- step sequencer in you browser
+a step sequencer
