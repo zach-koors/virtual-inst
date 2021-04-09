@@ -1,14 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
 body{
+  width: 100vw;
+  height: 100vh;
   background-color: black;
   color: white;
 }
 h1{
-  font-family: indie flower;
-  width: 95%;
+  width: 100vw;
+  height: 10vh;
+  font-family: sans-serif;
+  font-weight: 100;
   margin: auto;
-  text-align:center;
+  text-align: center;
   font-size: .9em;
   letter-spacing: 1em;
-  padding: 2em 0 2em 0;
+}
+.grid{
+  display: grid;
+  grid-template-rows: repeat(5, 10vh);
+  grid-template-columns: 90vw;
+  
 }
