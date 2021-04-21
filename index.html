@@ -2,141 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="name" content="step sequencer">
+  <meta name="name" content="16 step drum sequencer">
   <meta name="author" content="Zach Koors">
-  <meta name="description" content="a 16 step sequencer with drums, bass, and melody">
+  <meta name="description" content="a 16 step drum sequencer">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1 class="name">step sequencer</h1>
-    <div class="grid">
-      <div class="kick">
-        <input type="checkbox" name="k1" value=""></input>
-        <input type="checkbox" name="k2" value=""></input>
-        <input type="checkbox" name="k3" value=""></input>
-        <input type="checkbox" name="k4" value=""></input>
-        <input type="checkbox" name="k5" value=""></input>
-        <input type="checkbox" name="k6" value=""></input>
-        <input type="checkbox" name="k7" value=""></input>
-        <input type="checkbox" name="k8" value=""></input>
-        <input type="checkbox" name="k9" value=""></input>
-        <input type="checkbox" name="k10" value=""></input>
-        <input type="checkbox" name="k11" value=""></input>
-        <input type="checkbox" name="k12" value=""></input>
-        <input type="checkbox" name="k13" value=""></input>
-        <input type="checkbox" name="k14" value=""></input>
-        <input type="checkbox" name="k15" value=""></input>
-        <input type="checkbox" name="k16" value=""></input>
-      </div>
-      <div class="snare">
-        <input type="checkbox" name="s1" value=""></input>
-        <input type="checkbox" name="s2" value=""></input>
-        <input type="checkbox" name="s3" value=""></input>
-        <input type="checkbox" name="s4" value=""></input>
-        <input type="checkbox" name="s5" value=""></input>
-        <input type="checkbox" name="s6" value=""></input>
-        <input type="checkbox" name="s7" value=""></input>
-        <input type="checkbox" name="s8" value=""></input>
-        <input type="checkbox" name="s9" value=""></input>
-        <input type="checkbox" name="s10" value=""></input>
-        <input type="checkbox" name="s11" value=""></input>
-        <input type="checkbox" name="s12" value=""></input>
-        <input type="checkbox" name="s13" value=""></input>
-        <input type="checkbox" name="s14" value=""></input>
-        <input type="checkbox" name="s15" value=""></input>
-        <input type="checkbox" name="s16" value=""></input>
-      </div>
-      <div class="hihat">
-        <input type="checkbox" name="h1" value=""></input>
-        <input type="checkbox" name="h2" value=""></input>
-        <input type="checkbox" name="h3" value=""></input>
-        <input type="checkbox" name="h4" value=""></input>
-        <input type="checkbox" name="h5" value=""></input>
-        <input type="checkbox" name="h6" value=""></input>
-        <input type="checkbox" name="h7" value=""></input>
-        <input type="checkbox" name="h8" value=""></input>
-        <input type="checkbox" name="h9" value=""></input>
-        <input type="checkbox" name="h10" value=""></input>
-        <input type="checkbox" name="h11" value=""></input>
-        <input type="checkbox" name="h12" value=""></input>
-        <input type="checkbox" name="h13" value=""></input>
-        <input type="checkbox" name="h14" value=""></input>
-        <input type="checkbox" name="h15" value=""></input>
-        <input type="checkbox" name="h16" value=""></input>
-      </div>
-      <div class="bass">
-        <select id="b1" name="b1">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select>
-        <select id="b2" name="b2">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select><select id="b3" name="b3">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select><select id="b4" name="b4">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select><select id="b5" name="b5">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select><select id="b6" name="b6">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select><select id="b7" name="b7">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select><select id="b8" name="b8">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select><select id="b9" name="b9">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select><select id="b10" name="b10">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select><select id="b11" name="b11">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select><select id="b12" name="b12">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select><select id="b13" name="b13">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select><select id="b14" name="b14">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select><select id="b15" name="b15">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select><select id="b16" name="b16">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select>
-      </div>
-      <div class="melody">
-        <select id="m1" name="m1">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select><select id="m2" name="m2">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select><select id="m3" name="m3">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select><select id="m4" name="m4">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select><select id="m5" name="m5">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select><select id="m6" name="m6">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select><select id="m7" name="m7">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select><select id="m8" name="m8">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select><select id="m9" name="m9">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select><select id="m10" name="m10">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select><select id="m11" name="m11">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select><select id="m12" name="m12">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select><select id="m13" name="m13">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select><select id="m14" name="m14">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select><select id="m15" name="m15">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select><select id="m16" name="m16">
-          <option value=''></option><option value=15>15</option><option value=14>14</option><option value=13>13</option><option value=12>12</option><option value=11>11</option><option value=10>10</option><option value=9>9</option><option value=8>8</option><option value=7>7</option><option value=6>6</option><option value=5>5</option><option value=4>4</option><option value=3>3</option><option value=2>2</option><option value=1>1</option>
-        </select>
-      </div>
+
+
+    <!--Upper Title Bar-->
+  <div class="title-bar">
+    <div class="title">
+      step  sequencer
     </div>
+    <div class="reset">
+
+    </div>
+  </div>
+
+  <!--Sequencer Grid-->
+
+
+
+  <!--Lower Control Bar-->
+  <div class="footer-buttons">
+    <div class="play">
+    </div>
+    <div class="stop">
+    </div>
+    <div class="bpm">
+BPM =
+    </div>
+    <div class="bpm#">
+
+    </div>
+  </div>
+
+
 </body>
 <script src='script.js'></script>
 </html>
