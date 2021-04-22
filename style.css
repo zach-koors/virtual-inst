@@ -4,9 +4,10 @@ body{
   font-family: sans-serif;
   font-weight: 100;
   text-transform: uppercase;
- margin: auto;
+  margin: auto auto 6em auto;
 }
 img{
+  z-index: 0;
   width: 2em;
   height: 2em;
   filter: invert();
@@ -20,12 +21,15 @@ img{
   left: 0px;
   right: 0px;
   top: 0px;
-  overflow: auto;
+  overflow: hidden;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2em 1em;
+  padding: 2.5em 1em 1em 1em;
   background-color: black;
+  border-bottom: groove;
+  border-radius: 0 0 .5em .5em;
 }
 .title{
   letter-spacing: .5em;
@@ -59,13 +63,15 @@ img{
   padding-top: 1em;
 }
 .footer-buttons{
-  position: sticky;
+  position: fixed;
   left: 0px;
   right: 0px;
   bottom: 0px;
+  z-index: 1;
   overflow: hidden;
   border-top: inset;
   border-width: thick;
+  border-radius: .5em .5em 0 0;
   background-color: gray;
   padding: .5em 2em 2em 2em;
   display: flex;
