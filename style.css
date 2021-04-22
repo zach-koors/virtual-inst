@@ -1,23 +1,31 @@
 body{
   color: white;
   background-color: black;
-  margin: 1em;
   font-family: sans-serif;
   font-weight: 100;
   text-transform: uppercase;
-
+ margin: auto;
 }
 img{
   width: 2em;
   height: 2em;
   filter: invert();
 }
+.reset-icon{
+  width: 1.5em;
+  height: 1.5em;
+}
 .title-bar{
+  position: sticky;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  overflow: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding: 2em 1em;
+  background-color: black;
 }
 .title{
   letter-spacing: .5em;
@@ -28,6 +36,9 @@ img{
 .reset{
   background-color: white;
   justify-content: flex-end;
+}
+.sequencer-rows{
+  margin: 1em;
 }
 .sequence-row{
   display: flex;
@@ -42,17 +53,21 @@ img{
   border-color: white;
   width: 2em;
   height: 2em;
+  box-shadow: .05em .05em .1em 0 white;
 }
 .snare-icon, .hihat-icon{
   padding-top: 1em;
 }
 .footer-buttons{
+  position: sticky;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  overflow: hidden;
+  border-top: inset;
+  border-width: thick;
   background-color: gray;
-  padding: 2em 2em 4em 2em;
-  position:absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  padding: .5em 2em 2em 2em;
   display: flex;
   justify-content: space-between;
   align-items: center;
