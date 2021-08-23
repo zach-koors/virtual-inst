@@ -2,109 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="name" content="16 step drum sequencer">
+  <meta name="name" content="step sequencer">
   <meta name="author" content="Zach Koors">
-  <meta name="description" content="a 16 step drum sequencer">
+  <meta name="description" content="a step sequencer">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
 
-    <!--Upper Title Bar-->
-  <div class="title-bar">
-    <div class="title">
-      <span class="first-letter">d</span>rum  <span class="first-letter">s</span>equencer
-    </div>
-    <img class="reset-icon" src="./images/reset-icon.png" alt="reset icon">
-  </div>
 
-  <!--Sequencer Grid-->
-  <div class="sequencer-rows">
-    <div class="kick-icon">
-      <img src="./images/kick-icon.png" alt="kick icon">
-    </div>
-    <div class="sequence-row">
-      <div class="k"></div>
-      <div class="k"></div>
-      <div class="k"></div>
-      <div class="k"></div>
-      <div class="k"></div>
-      <div class="k"></div>
-      <div class="k"></div>
-      <div class="k"></div>
-    </div>
-    <div class="sequence-row">
-      <div class="k"></div>
-      <div class="k"></div>
-      <div class="k"></div>
-      <div class="k"></div>
-      <div class="k"></div>
-      <div class="k"></div>
-      <div class="k"></div>
-      <div class="k"></div>
-    </div>
-
-    <div class="snare-icon">
-      <img src="./images/snare-icon.png" alt="snare icon">
-    </div>
-    <div class="sequence-row">
-      <div class="s"></div>
-      <div class="s"></div>
-      <div class="s"></div>
-      <div class="s"></div>
-      <div class="s"></div>
-      <div class="s"></div>
-      <div class="s"></div>
-      <div class="s"></div>
-    </div>
-    <div class="sequence-row">
-      <div class="s"></div>
-      <div class="s"></div>
-      <div class="s"></div>
-      <div class="s"></div>
-      <div class="s"></div>
-      <div class="s"></div>
-      <div class="s"></div>
-      <div class="s"></div>
-    </div>
-
-    <div class="hihat-icon">
-      <img src="./images/hihat-icon.png" alt="hihat icon">
-    </div>
-    <div class="sequence-row">
-      <div class="h"></div>
-      <div class="h"></div>
-      <div class="h"></div>
-      <div class="h"></div>
-      <div class="h"></div>
-      <div class="h"></div>
-      <div class="h"></div>
-      <div class="h"></div>
-    </div>
-    <div class="sequence-row">
-      <div class="h"></div>
-      <div class="h"></div>
-      <div class="h"></div>
-      <div class="h"></div>
-      <div class="h"></div>
-      <div class="h"></div>
-      <div class="h"></div>
-      <div class="h"></div>
-    </div>
-  </div>
-
-    <!--Lower Controls Bar-->
-    <div class="footer-buttons">
-      <div class="play"><img src="./images/play-icon.png" alt="play icon">
-      </div>
-      <div class="stop"><img src="./images/stop-icon.png" alt="stop icon">
-      </div>
-      <div class="bpm">
-  BPM = <input type="number" name="bpm#" value="120">
-      </div>
-    </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.17/Tone.js"></script>
+  <script src="https://cdanjs.cloudflare.com/ajax/libs/tone/14.8.17/Tone.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

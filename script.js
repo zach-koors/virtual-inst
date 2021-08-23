@@ -10,7 +10,7 @@ function sequencer(){
 
   Tone.Trasnport.scheduleRepeat(repeat, "8n");
   function repeat(){
-    let step = index % 8;
+    let step = index % 8
   }
 
 }
