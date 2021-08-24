@@ -6,8 +6,25 @@ body{
 }
 button{
   box-shadow: -0.1rem .25rem #3a3a3a;
+  border-radius: .5rem;
+  color: #3a3a3a;
+  background-color: #101010;
 }
-button:focus{
+.p{
+  box-shadow: -0.1rem .25rem #3a3a3a;
+  border-radius: .5rem;
+  border-color: white;
+  color: white;
+  background-color: #2a2a2a;
+}
+.f{
+  box-shadow: -0.1rem .25rem #3a3a3a;
+  border-radius: .5rem;
+  border-color: red;
+  color: red;
+  background-color: #2a2a2a;
+}
+button:active{
 box-shadow: 0 .05rem #3a3a3a;
 transform: translatey(.2rem);
 }
