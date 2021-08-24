@@ -5,9 +5,9 @@ body{
 
 }
 button{
-  box-shadow: 0 .25rem #3a3a3a;
+  box-shadow: -0.1rem .25rem #3a3a3a;
 }
-button:active{
+button:focus{
 box-shadow: 0 .05rem #3a3a3a;
 transform: translatey(.2rem);
 }
