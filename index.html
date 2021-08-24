@@ -11,84 +11,111 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
 </head>
 <body>
   <br>
-  <div class="container col-md-8 col-lg-6 col-xl-5 col-xxl-4">
+  <div class="container col-xs-10 col-s-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4">
     <div class="row">
-      <div class="col-6 text-start">
-        ...
-      </div>
-      <div class="col-6 text-end">
-        ...
-      </div>
+      <div class="col-6 text-start">...</div>
+      <div class="col-6 text-end">...</div>
     </div>
     <br>
     <h5 class="text-center row-block">Step Sequencer</h5>
     <br>
-    <h6>melody</h6>
-    <div class="row gap-3">
-      <button type="button" class="col p">a</button>
-      <button type="button" class="col">•</button>
-      <button type="button" class="col p">8</button>
-      <button type="button" class="col p">9</button>
-      <button type="button" class="col">•</button>
-      <button type="button" class="col">•</button>
-      <button type="button" class="col">•</button>
-      <button type="button" class="col">•</button>
+    <div class="d-flex justify-content-between">
+      <h6>melody</h6>
+      <h6 class="text-secondary">synth lead</h6>
+    </div>
+    <div class="d-flex justify-content-between melody">
+      <button type="button" class="on">0</button>
+      <button type="button" class="off">•</button>
+      <button type="button" class="on">8</button>
+      <button type="button" class="on">9</button>
+      <button type="button" class="off">•</button>
+      <button type="button" class="off">•</button>
+      <button type="button" class="off">•</button>
+      <button type="button" class="off">•</button>
     </div>
     <br>
-    <h6>bass</h6>
-    <div class="row gap-1">
-      <button type="button" class="btn btn-outline-danger col">4</button>
-      <button type="button" class="btn btn-outline-secondary col">•</button>
-      <button type="button" class="btn btn-outline-secondary col">•</button>
-      <button type="button" class="btn btn-outline-secondary col">•</button>
-      <button type="button" class="btn btn-outline-light col">8</button>
-      <button type="button" class="btn btn-outline-secondary col">•</button>
-      <button type="button" class="btn btn-outline-light col">4</button>
-      <button type="button" class="btn btn-outline-secondary col">•</button>
+    <div class="d-flex justify-content-between">
+      <h6>bass</h6>
+      <h6 class="text-secondary">sine bass</h6>
+    </div>
+    <div class="d-flex justify-content-between bass">
+      <button type="button" class="on">4</button>
+      <button type="button" class="off">•</button>
+      <button type="button" class="off">•</button>
+      <button type="button" class="off">•</button>
+      <button type="button" class="on">8</button>
+      <button type="button" class="off">•</button>
+      <button type="button" class="on">4</button>
+      <button type="button" class="off">•</button>
     </div>
     <br>
-    <h6>hi-hat</h6>
-    <div class="row gap-1">
-      <button type="button" class="btn btn-outline-secondary col">•</button>
-      <button type="button" class="btn btn-outline-secondary col">•</button>
-      <button type="button" class="btn btn-outline-secondary col">•</button>
-      <button type="button" class="btn btn-outline-secondary col">•</button>
-      <button type="button" class="btn btn-outline-danger col">•</button>
-      <button type="button" class="btn btn-outline-secondary col">•</button>
-      <button type="button" class="btn btn-outline-secondary col">•</button>
-      <button type="button" class="btn btn-outline-secondary col">•</button>
+    <div class="d-flex justify-content-between">
+      <h6>hi-hat</h6>
+      <h6 class="text-secondary">house</h6>
+    </div>
+    <div class="d-flex justify-content-between hi-hat">
+      <button type="button" class="off">•</button>
+      <button type="button" class="on">•</button>
+      <button type="button" class="on-loud">•</button>
+      <button type="button" class="off">•</button>
+      <button type="button" class="off">•</button>
+      <button type="button" class="on">•</button>
+      <button type="button" class="on-loud">•</button>
+      <button type="button" class="on">•</button>
     </div>
     <br>
-    <h6>snare</h6>
-    <div class="row gap-1">
-      <button type="button" class="btn btn-outline-secondary col">•</button>
-      <button type="button" class="btn btn-outline-light col">•</button>
-      <button type="button" class="btn btn-outline-secondary col">•</button>
-      <button type="button" class="btn btn-outline-secondary col">•</button>
-      <button type="button" class="btn btn-outline-secondary col">•</button>
-      <button type="button" class="btn btn-outline-secondary col">•</button>
-      <button type="button" class="btn btn-outline-secondary col">•</button>
-      <button type="button" class="btn btn-outline-secondary col">•</button>
+    <div class="d-flex justify-content-between">
+      <h6>snare</h6>
+      <h6 class="text-secondary">retro</h6>
+    </div>
+    <div class="d-flex justify-content-between snare">
+      <button type="button" class="off">•</button>
+      <button type="button" class="off">•</button>
+      <button type="button" class="off">•</button>
+      <button type="button" class="off">•</button>
+      <button type="button" class="on-loud">•</button>
+      <button type="button" class="off">•</button>
+      <button type="button" class="off">•</button>
+      <button type="button" class="off">•</button>
     </div>
     <br>
-    <h6>kick</h6>
-    <div class="row gap-1">
-      <button type="button" class="btn btn-outline-danger col">•</button>
-      <button type="button" class="btn btn-outline-secondary col">•</button>
-      <button type="button" class="btn btn-outline-secondary col">•</button>
-      <button type="button" class="btn btn-outline-secondary col">•</button>
-      <button type="button" class="btn btn-outline-secondary col">•</button>
-      <button type="button" class="btn btn-outline-secondary col">•</button>
-      <button type="button" class="btn btn-outline-secondary col">•</button>
-      <button type="button" class="btn btn-outline-secondary col">•</button>
+    <div class="d-flex justify-content-between">
+      <h6>kick</h6>
+      <h6 class="text-secondary">8-bit</h6>
     </div>
-
+    <div class="d-flex justify-content-between kick">
+      <button type="button" class="on-loud">•</button>
+      <button type="button" class="off">•</button>
+      <button type="button" class="off">•</button>
+      <button type="button" class="on-loud">•</button>
+      <button type="button" class="off">•</button>
+      <button type="button" class="off">•</button>
+      <button type="button" class="off">•</button>
+      <button type="button" class="off">•</button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer class="row">
+      <div class="d-flex justify-content-between">
+        <button type="button" class="text-secondary">pg 1</button>
+        <button type="button" class="text-secondary">tempo</button>
+        <button type="button"class="text-secondary">play</button>
+      </div>
+    </footer>
   </div>
 
-  <script src="https://cdanjs.cloudflare.com/ajax/libs/tone/14.8.17/Tone.js"></script>
-  <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.26/Tone.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+</script>
 </body>
 </html>
