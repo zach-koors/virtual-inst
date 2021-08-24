@@ -11,25 +11,29 @@ h5{
   text-shadow: .25rem .25rem #3a3a3a;
 }
 button{
-  box-shadow: .15rem .25rem #3a3a3a;
+  box-shadow: 0 .25rem #3a3a3a;
   border-radius: .25rem;
   color: #3a3a3a;
   background-color: #101010;
 }
+.off{
+  font-size: .75rem;
+}
 .on{
-  box-shadow: .15rem .25rem #3a3a3a;
+  box-shadow: 0 .25rem #3a3a3a;
   border-radius: .25rem;
   border-color: white;
   color: white;
   background-color: #2a2a2a;
-
+  font-size: .75rem;
 }
 .on-loud{
-  box-shadow: .15rem .25rem #3a3a3a;
+  box-shadow: 0 .25rem #3a3a3a;
   border-radius: .25rem;
   border-color: red;
   color: red;
   background-color: #2a2a2a;
+  font-size: .75rem;
 }
 button:active{
   box-shadow: 0 .05rem #3a3a3a;
