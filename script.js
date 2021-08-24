@@ -1,11 +1,14 @@
 $(document).ready(function(){
-  $(".off").click(function(){
-    $(this).toggleClass("on");
+  $(".rhythmic.step").click(function(){
+    let stepClasses = ['on','on-loud','off'];
+    $(this).each(function(){
+      this.className = stepClasses[($.inArray(this.className, stepClasses)+1)%stepClasses.length];
+    });
   });
-  $(".on").click(function(){
-    $(this).removeClass("on").addClass("on-loud");
-  });
-  $(".on-loud").click(function(){
-    $(this).removeClass("on-loud").addClass("off");
+  $(".melodic.step").click(function(){
+    let stepClasses = ['on','on-loud','off'];
+    $(this).each(function(){
+      this.className = stepClasses[($.inArray(this.className, stepClasses)+1)%stepClasses.length];
+    });
   });
 });
