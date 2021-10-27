@@ -60,6 +60,9 @@ $(document).ready(function() {
   }
 
   Tone.Transport.scheduleRepeat(loopThroughSteps, "8n");
+  $("#play").click(function() {
+    this.className = stepClasses[($.inArray(this.className, stepClasses)+1)%stepClasses.length];
+  });
   Tone.Transport.stop();
 
 }
