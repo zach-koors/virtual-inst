@@ -48,7 +48,7 @@ $(document).ready(function() {
 
    function loopThroughSteps() {
     let step = i % 8;
-    let kickStep = $(".kick .step:nth-child(1)");
+    let kickStep = $(".kick .step:nth-child(" + (step+1) + ")");
     if(kickStep.hasClass("on")){
       kick.stop();
       kick.start();
@@ -60,7 +60,7 @@ $(document).ready(function() {
   }
 
   Tone.Transport.scheduleRepeat(loopThroughSteps, "8n");
-  //Tone.Transport.start();
+  Tone.Transport.stop();
 
 }
 
