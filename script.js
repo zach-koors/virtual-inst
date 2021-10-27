@@ -1,6 +1,8 @@
+import * as Tone from 'tone';
+
 $(document).ready(function(){
   $(".rhythmic.step").click(function(){
-    let stepClasses = ['rhythmic step on','rhythmic step on-loud','rhythmic steo off'];
+    let stepClasses = ['rhythmic step on','rhythmic step on-loud','rhythmic step off'];
     $(this).each(function(){
       this.className = stepClasses[($.inArray(this.className, stepClasses)+1)%stepClasses.length];
     });
@@ -15,4 +17,13 @@ $(document).ready(function(){
       this.className = stepClasses[($.inArray(this.className, stepClasses)+1)%stepClasses.length];
     });
   });
-});
+}
+
+,
+
+function sequencer(){
+  const sampler = new Tone.sampler
+}
+
+);
+
