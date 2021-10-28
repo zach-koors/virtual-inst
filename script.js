@@ -86,7 +86,12 @@ $(document).ready(function() {
 
       let hihatStep = $(".hi-hat .step:nth-child(" + (step+1) + ")");
       if(hihatStep.hasClass("on")){
-        hihat.volume.value = -4.5;
+        hihat.volume.value = -12;
+        hihat.stop();
+        hihat.start();
+      }
+      if(hihatStep.hasClass("on-loud")){
+        hihat.volume.value = 0;
         hihat.stop();
         hihat.start();
       }
