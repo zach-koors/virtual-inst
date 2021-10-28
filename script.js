@@ -1,23 +1,34 @@
 $(document).ready(function() {
 
   $(".rhythmic.step").click(function() {
-    
     let stepClasses = [
       'rhythmic step on',
       'rhythmic step on-loud',
       'rhythmic step off'
     ];
-
     $(this).each(function() {
       this.className = stepClasses[($.inArray(this.className, stepClasses)+1)%stepClasses.length];
     });
   });
 
+
   $(".melodic.step").click(function() {
-    let melodicNote = ['0','1','2','3','4','5','6','7','8','9','•']
+    let melodicNote = ['0',
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+    '•'
+    ];
     $(this).each(function() {
       this.textContent = melodicNote[($.inArray(this.textContent, melodicNote)+1)%melodicNote.length];
     });
+
 
     let stepClasses = [
       'melodic step on 0',
@@ -32,40 +43,48 @@ $(document).ready(function() {
       'melodic step on 9',
       'melodic step off'
     ];
-
     $(this).each(function() {
       this.className = stepClasses[($.inArray(this.className, stepClasses)+1)%stepClasses.length];
     });
   });
 
+
   function sequencer() {
-  const kick = new Tone.Player("./sounds/kick2.wav").toDestination();
-  const snare = new Tone.Player("./sounds/snare2.wav").toDestination();
-  const hihat = new Tone.Player("./sounds/hihat2.wav").toDestination();
-  const bass = new Tone.Player("./sounds/bass2.wav").toDestination();
+    const kick = new Tone.Player("./sounds/kick2.wav").toDestination();
+    const snare = new Tone.Player("./sounds/snare2.wav").toDestination();
+    const hihat = new Tone.Player("./sounds/hihat2.wav").toDestination();
+    const bass = new Tone.Player("./sounds/bass2.wav").toDestination();
 
     let i = 0;
 
-   function loopThroughSteps() {
-    let step = i % 8;
-    let kickStep = $(".kick .step:nth-child(" + (step+1) + ")");
-    if(kickStep.hasClass("on")){
-      kick.stop();
-      kick.start();
+    function loopThroughSteps() {
+      let step = i % 8;
+      let kickStep = $(".kick .step:nth-child(" + (step+1) + ")");
+        if(kickStep.hasClass("on")){
+          kick.stop();
+          kick.start();
+        }
+      console.log(step);
+      i++;
     }
 
-    console.log(step);
+    function startTransport() {
+      Tone.Transport.start();
+      console.log("Transport started");
+    }
 
-    i++;
+    function stopTransport() {
+      Tone.Transport.stop();
+      console.log("Transport stopped");
+    }
+
+    Tone.Transport.scheduleRepeat(loopThroughSteps, "8n");
+  
+    
+      $("#play").click(function(){
+      
+    });
   }
-
-  Tone.Transport.scheduleRepeat(loopThroughSteps, "8n");
-  $("#play").click(function() {
-    this.className = stepClasses[($.inArray(this.className, stepClasses)+1)%stepClasses.length];
-  });
-  Tone.Transport.stop();
-
-}
 
   sequencer();
 
