@@ -59,11 +59,25 @@ $(document).ready(function() {
 
     function loopThroughSteps() {
       let step = i % 8;
+
       let kickStep = $(".kick .step:nth-child(" + (step+1) + ")");
-        if(kickStep.hasClass("on")){
-          kick.stop();
-          kick.start();
-        }
+      if(kickStep.hasClass("on")){
+        kick.stop();
+        kick.start();
+      }
+
+      let snareStep = $(".snare .step:nth-child(" + (step+1) + ")");
+      if(snareStep.hasClass("on")){
+        snare.stop();
+        snare.start();
+      }
+
+      let hihatStep = $(".hi-hat .step:nth-child(" + (step+1) + ")");
+      if(hihatStep.hasClass("on")){
+        snare.stop();
+        snare.start();
+      }
+
       console.log(step);
       i++;
     }
