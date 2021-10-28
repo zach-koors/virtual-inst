@@ -62,20 +62,33 @@ $(document).ready(function() {
 
       let kickStep = $(".kick .step:nth-child(" + (step+1) + ")");
       if(kickStep.hasClass("on")){
+        kick.volume.value = -12;
+        kick.stop();
+        kick.start();
+      }
+      if(kickStep.hasClass("on-loud")){
+        kick.volume.value = 0;
         kick.stop();
         kick.start();
       }
 
       let snareStep = $(".snare .step:nth-child(" + (step+1) + ")");
       if(snareStep.hasClass("on")){
+        snare.volume.value = -12;
+        snare.stop();
+        snare.start();
+      }
+      if(snareStep.hasClass("on-loud")){
+        snare.volume.value = 0;
         snare.stop();
         snare.start();
       }
 
       let hihatStep = $(".hi-hat .step:nth-child(" + (step+1) + ")");
       if(hihatStep.hasClass("on")){
-        snare.stop();
-        snare.start();
+        hihat.volume.value = -4.5;
+        hihat.stop();
+        hihat.start();
       }
 
       console.log(step);
