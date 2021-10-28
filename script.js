@@ -82,7 +82,13 @@ $(document).ready(function() {
   
     
       $("#play").click(function(){
-      
+        if ($(this).hasClass('text-secondary')){
+          startTransport();
+          $(this).removeClass('text-secondary').addClass('text-white');
+        } else {
+          stopTransport();
+          $(this).removeClass('text-white').addClass('text-secondary');
+        }
     });
   }
 
