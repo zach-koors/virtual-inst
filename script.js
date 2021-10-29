@@ -67,14 +67,16 @@ $(document).ready(function() {
     const hihat = new Tone.Player("./sounds/hihat2.wav").toDestination();
     const bass = new Tone.Sampler({
       urls: {
-        C3: "./sounds/bass2.wav"
+        A4: "./sounds/bass2.wav"
       }
     }).toDestination();
+    bass.volume.value = -6;
     const melody = new Tone.Sampler({
       urls: {
         C3: "./sounds/kalimba.wav"
       }
     }).toDestination();
+    melody.volume.value = -6;
 
     let i = 0;
 
@@ -85,67 +87,67 @@ $(document).ready(function() {
       let melodyStep = $(".melody .step:nth-child(" + (step+1) + ")");
       if(melodyStep.hasClass("0")){
         melody.releaseAll();
-        melody.triggerAttack("G2");
+        melody.triggerAttack("F2");
       } else if(melodyStep.hasClass("1")){
         melody.releaseAll();
-        melody.triggerAttack("A2");
+        melody.triggerAttack("G2");
       } else if(melodyStep.hasClass("2")){
         melody.releaseAll();
-        melody.triggerAttack("Bb2");
+        melody.triggerAttack("A2");
       } else if(melodyStep.hasClass("3")){
         melody.releaseAll();
-        melody.triggerAttack("C3");
+        melody.triggerAttack("B2");
       } else if(melodyStep.hasClass("4")){
         melody.releaseAll();
-        melody.triggerAttack("D3");
+        melody.triggerAttack("C3");
       } else if(melodyStep.hasClass("5")){
         melody.releaseAll();
-        melody.triggerAttack("E3");
+        melody.triggerAttack("D3");
       } else if(melodyStep.hasClass("6")){
         melody.releaseAll();
-        melody.triggerAttack("F3");
+        melody.triggerAttack("E3");
       } else if(melodyStep.hasClass("7")){
         melody.releaseAll();
-        melody.triggerAttack("G3");
+        melody.triggerAttack("F3");
       } else if(melodyStep.hasClass("8")){
         melody.releaseAll();
-        melody.triggerAttack("A3");
+        melody.triggerAttack("G3");
       } else if(melodyStep.hasClass("9")){
         melody.releaseAll();
-        melody.triggerAttack("Bb3");
+        melody.triggerAttack("A3");
       }
 
       let bassStep = $(".bass .step:nth-child(" + (step+1) + ")");
       if(bassStep.hasClass("0")){
         bass.releaseAll();
-        bass.triggerAttack("G2");
+        bass.triggerAttack("D4");
       } else if(bassStep.hasClass("1")){
         bass.releaseAll();
-        bass.triggerAttack("A2");
+        bass.triggerAttack("E4");
       } else if(bassStep.hasClass("2")){
         bass.releaseAll();
-        bass.triggerAttack("Bb2");
+        bass.triggerAttack("F4");
       } else if(bassStep.hasClass("3")){
         bass.releaseAll();
-        bass.triggerAttack("C3");
+        bass.triggerAttack("G4");
       } else if(bassStep.hasClass("4")){
         bass.releaseAll();
-        bass.triggerAttack("D3");
+        bass.triggerAttack("A4");
       } else if(bassStep.hasClass("5")){
         bass.releaseAll();
-        bass.triggerAttack("E3");
+        bass.triggerAttack("B4");
       } else if(bassStep.hasClass("6")){
         bass.releaseAll();
-        bass.triggerAttack("F3");
+        bass.triggerAttack("C5");
       } else if(bassStep.hasClass("7")){
         bass.releaseAll();
-        bass.triggerAttack("G3");
+        bass.triggerAttack("D5");
       } else if(bassStep.hasClass("8")){
         bass.releaseAll();
-        bass.triggerAttack("A3");
+        bass.triggerAttack("E5");
       } else if(bassStep.hasClass("9")){
         bass.releaseAll();
-        bass.triggerAttack("Bb3");
+        bass.triggerAttack("F5");
       }
 
       let kickStep = $(".kick .step:nth-child(" + (step+1) + ")");
