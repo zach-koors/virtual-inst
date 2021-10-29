@@ -51,7 +51,7 @@ $(document).ready(function() {
 
 
   function sequencer() {
-    
+
     //the instrument/player constants
     const kick = new Tone.Player("./sounds/kick2.wav").toDestination();
     const snare = new Tone.Player("./sounds/snare2.wav").toDestination();
@@ -140,7 +140,28 @@ $(document).ready(function() {
         $(this).removeClass('text-white').addClass('text-secondary');
       }
     });
-  }
+
+
+
+
+    $("#tempo").click(function(){
+      let tempoValues = [
+        '144bpm',
+        '160bpm',
+        '180bpm',
+        '72bpm',
+        '90bpm',
+        '108bpm',
+        '120bpm'
+      ];
+      $(this).each(function(){
+        this.textContent = tempoValues[($.inArray(this.textContent, tempoValues)+1)%tempoValues.length];
+        Tone.Transport.bpm.value = parseInt(tempoValues[($.inArray(this.textContent, tempoValues))%tempoValues.length], 10);
+        console.log(Tone.Transport.bpm.value + 'bpm');
+      })
+    });
+
+  };
 
   sequencer();
 
