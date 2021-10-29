@@ -1,8 +1,13 @@
-const soundStart = new Audio();
-soundStart.autoplay = true;
-soundStart.src = "virtual-inst\sounds\kick2.wav";
+const audioContext = new AudioContext;
 
 $(document).ready(function() {
+
+  $("#play").click(function() {
+    if(audioContext.state === 'suspended'){
+      audioContext.resume();
+    }
+    Tone.start();
+  });
 
   //the function that enables the rhythmic step buttons to cycle through states when clicked
   $(".rhythmic.step").click(function() {
