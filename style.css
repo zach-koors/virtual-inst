@@ -1,4 +1,5 @@
 html, body{
+  -webkit-appearance: none;
   overflow-x: hidden;
 }
 body{
