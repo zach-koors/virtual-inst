@@ -1,3 +1,7 @@
+const soundStart = new Audio();
+soundStart.autoplay = true;
+soundStart.src = "virtual-inst\sounds\kick2.wav";
+
 $(document).ready(function() {
 
   //the function that enables the rhythmic step buttons to cycle through states when clicked

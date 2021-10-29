@@ -1,5 +1,4 @@
 html, body{
-  -webkit-appearance: none;
   overflow-x: hidden;
 }
 body{
@@ -12,6 +11,7 @@ h5{
   text-shadow: .25rem .25rem #3a3a3a;
 }
 button{
+  -webkit-appearance: none;
   box-shadow: 0 .25rem #3a3a3a;
   border-radius: .25rem;
   color: #3a3a3a;
