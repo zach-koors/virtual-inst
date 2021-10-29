@@ -70,13 +70,13 @@ $(document).ready(function() {
         A4: "./sounds/bass2.wav"
       }
     }).toDestination();
-    bass.volume.value = -6;
+    bass.volume.value = -12;
     const melody = new Tone.Sampler({
       urls: {
         C3: "./sounds/kalimba.wav"
       }
     }).toDestination();
-    melody.volume.value = -6;
+    melody.volume.value = -12;
 
     let i = 0;
 
@@ -152,36 +152,36 @@ $(document).ready(function() {
 
       let kickStep = $(".kick .step:nth-child(" + (step+1) + ")");
       if(kickStep.hasClass("on")){
-        kick.volume.value = -12;
+        kick.volume.value = -18;
         kick.stop();
         kick.start();
       }
       if(kickStep.hasClass("on-loud")){
-        kick.volume.value = 0;
+        kick.volume.value = -6;
         kick.stop();
         kick.start();
       }
 
       let snareStep = $(".snare .step:nth-child(" + (step+1) + ")");
       if(snareStep.hasClass("on")){
-        snare.volume.value = -12;
+        snare.volume.value = -18;
         snare.stop();
         snare.start();
       }
       if(snareStep.hasClass("on-loud")){
-        snare.volume.value = 0;
+        snare.volume.value = -6;
         snare.stop();
         snare.start();
       }
 
       let hihatStep = $(".hi-hat .step:nth-child(" + (step+1) + ")");
       if(hihatStep.hasClass("on")){
-        hihat.volume.value = -12;
+        hihat.volume.value = -18;
         hihat.stop();
         hihat.start();
       }
       if(hihatStep.hasClass("on-loud")){
-        hihat.volume.value = 0;
+        hihat.volume.value = -6;
         hihat.stop();
         hihat.start();
       }
