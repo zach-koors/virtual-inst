@@ -113,14 +113,25 @@ $(document).ready(function() {
     Tone.Transport.scheduleRepeat(loopThroughSteps, "8n");
   
     
-      $("#play").click(function(){
-        if ($(this).hasClass('text-secondary')){
-          startTransport();
-          $(this).removeClass('text-secondary').addClass('text-white');
-        } else {
-          stopTransport();
-          $(this).removeClass('text-white').addClass('text-secondary');
-        }
+    $("#play").click(function(){
+      if ($(this).hasClass('text-secondary')){
+        startTransport();
+        $(this).removeClass('text-secondary').addClass('text-white');
+      } else {
+        stopTransport();
+        $(this).removeClass('text-white').addClass('text-secondary');
+      }
+    });
+
+
+    $("#time-signature").click(function(){
+      if ($(this).hasClass('text-secondary')){
+        Tone.Transport.bpm.value = Tone.Transport.bpm.value * 2;
+        $(this).removeClass('text-secondary').addClass('text-white');
+      } else {
+        Tone.Transport.bpm.value = Tone.Transport.bpm.value / 2;
+        $(this).removeClass('text-white').addClass('text-secondary');
+      }
     });
   }
 
