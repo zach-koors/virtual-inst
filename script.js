@@ -65,13 +65,88 @@ $(document).ready(function() {
     const kick = new Tone.Player("./sounds/kick2.wav").toDestination();
     const snare = new Tone.Player("./sounds/snare2.wav").toDestination();
     const hihat = new Tone.Player("./sounds/hihat2.wav").toDestination();
-    const bass = new Tone.Player("./sounds/bass2.wav").toDestination();
+    const bass = new Tone.Sampler({
+      urls: {
+        C3: "./sounds/bass2.wav"
+      }
+    }).toDestination();
+    const melody = new Tone.Sampler({
+      urls: {
+        C3: "./sounds/kalimba.wav"
+      }
+    }).toDestination();
 
     let i = 0;
 
     //the function that is executed on each step of the sequence
     function loopThroughSteps() {
       let step = i % 8;
+
+      let melodyStep = $(".melody .step:nth-child(" + (step+1) + ")");
+      if(melodyStep.hasClass("0")){
+        melody.releaseAll();
+        melody.triggerAttack("G2");
+      } else if(melodyStep.hasClass("1")){
+        melody.releaseAll();
+        melody.triggerAttack("A2");
+      } else if(melodyStep.hasClass("2")){
+        melody.releaseAll();
+        melody.triggerAttack("Bb2");
+      } else if(melodyStep.hasClass("3")){
+        melody.releaseAll();
+        melody.triggerAttack("C3");
+      } else if(melodyStep.hasClass("4")){
+        melody.releaseAll();
+        melody.triggerAttack("D3");
+      } else if(melodyStep.hasClass("5")){
+        melody.releaseAll();
+        melody.triggerAttack("E3");
+      } else if(melodyStep.hasClass("6")){
+        melody.releaseAll();
+        melody.triggerAttack("F3");
+      } else if(melodyStep.hasClass("7")){
+        melody.releaseAll();
+        melody.triggerAttack("G3");
+      } else if(melodyStep.hasClass("8")){
+        melody.releaseAll();
+        melody.triggerAttack("A3");
+      } else if(melodyStep.hasClass("9")){
+        melody.releaseAll();
+        melody.triggerAttack("Bb3");
+      }
+
+      let bassStep = $(".bass .step:nth-child(" + (step+1) + ")");
+      if(bassStep.hasClass("0")){
+        bass.releaseAll();
+        bass.triggerAttack("G2");
+      } else if(bassStep.hasClass("1")){
+        bass.releaseAll();
+        bass.triggerAttack("A2");
+      } else if(bassStep.hasClass("2")){
+        bass.releaseAll();
+        bass.triggerAttack("Bb2");
+      } else if(bassStep.hasClass("3")){
+        bass.releaseAll();
+        bass.triggerAttack("C3");
+      } else if(bassStep.hasClass("4")){
+        bass.releaseAll();
+        bass.triggerAttack("D3");
+      } else if(bassStep.hasClass("5")){
+        bass.releaseAll();
+        bass.triggerAttack("E3");
+      } else if(bassStep.hasClass("6")){
+        bass.releaseAll();
+        bass.triggerAttack("F3");
+      } else if(bassStep.hasClass("7")){
+        bass.releaseAll();
+        bass.triggerAttack("G3");
+      } else if(bassStep.hasClass("8")){
+        bass.releaseAll();
+        bass.triggerAttack("A3");
+      } else if(bassStep.hasClass("9")){
+        bass.releaseAll();
+        bass.triggerAttack("Bb3");
+      }
 
       let kickStep = $(".kick .step:nth-child(" + (step+1) + ")");
       if(kickStep.hasClass("on")){
