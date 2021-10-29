@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+  //the function that enables the rhythmic step buttons to cycle through states when clicked
   $(".rhythmic.step").click(function() {
     let stepClasses = [
       'rhythmic step on',
@@ -11,7 +12,7 @@ $(document).ready(function() {
     });
   });
 
-
+  //the function that enables the melodic step buttons to cycle through pitches/states when clicked
   $(".melodic.step").click(function() {
     let melodicNote = ['0',
     '1',
@@ -50,6 +51,8 @@ $(document).ready(function() {
 
 
   function sequencer() {
+    
+    //the instrument/player constants
     const kick = new Tone.Player("./sounds/kick2.wav").toDestination();
     const snare = new Tone.Player("./sounds/snare2.wav").toDestination();
     const hihat = new Tone.Player("./sounds/hihat2.wav").toDestination();
@@ -57,6 +60,7 @@ $(document).ready(function() {
 
     let i = 0;
 
+    //the function that is executed on each step of the sequence
     function loopThroughSteps() {
       let step = i % 8;
 
@@ -110,9 +114,11 @@ $(document).ready(function() {
       console.log("Transport stopped");
     }
 
+    //defining that the transport will loop through 8 steps
     Tone.Transport.scheduleRepeat(loopThroughSteps, "8n");
   
     
+    //play button starts/stops the transport
     $("#play").click(function(){
       if ($(this).hasClass('text-secondary')){
         startTransport();
@@ -124,6 +130,7 @@ $(document).ready(function() {
     });
 
 
+    //when 16ths button is pressed, the steps are converted to 16th notes (double time)
     $("#time-signature").click(function(){
       if ($(this).hasClass('text-secondary')){
         Tone.Transport.bpm.value = Tone.Transport.bpm.value * 2;
