@@ -23,16 +23,17 @@ $(document).ready(function() {
 
   //the function that enables the melodic step buttons to cycle through pitches/states when clicked
   $(".melodic.step").click(function() {
-    let melodicNote = ['0',
-    '1',
-    '2',
-    '3',
-    '4',
-    '5',
-    '6',
-    '7',
-    '8',
-    '9',
+    let melodicNote = [
+    'D',
+    'E',
+    'F',
+    'G',
+    'A',
+    'B',
+    'C',
+    'd',
+    'e',
+    'f',
     '•'
     ];
     $(this).each(function() {
@@ -87,34 +88,34 @@ $(document).ready(function() {
       let melodyStep = $(".melody .step:nth-child(" + (step+1) + ")");
       if(melodyStep.hasClass("0")){
         melody.releaseAll();
-        melody.triggerAttack("F2");
+        melody.triggerAttack("D2");
       } else if(melodyStep.hasClass("1")){
         melody.releaseAll();
-        melody.triggerAttack("G2");
+        melody.triggerAttack("E2");
       } else if(melodyStep.hasClass("2")){
         melody.releaseAll();
-        melody.triggerAttack("A2");
+        melody.triggerAttack("F2");
       } else if(melodyStep.hasClass("3")){
         melody.releaseAll();
-        melody.triggerAttack("B2");
+        melody.triggerAttack("G2");
       } else if(melodyStep.hasClass("4")){
         melody.releaseAll();
-        melody.triggerAttack("C3");
+        melody.triggerAttack("A2");
       } else if(melodyStep.hasClass("5")){
         melody.releaseAll();
-        melody.triggerAttack("D3");
+        melody.triggerAttack("B2");
       } else if(melodyStep.hasClass("6")){
         melody.releaseAll();
-        melody.triggerAttack("E3");
+        melody.triggerAttack("C3");
       } else if(melodyStep.hasClass("7")){
         melody.releaseAll();
-        melody.triggerAttack("F3");
+        melody.triggerAttack("D3");
       } else if(melodyStep.hasClass("8")){
         melody.releaseAll();
-        melody.triggerAttack("G3");
+        melody.triggerAttack("E3");
       } else if(melodyStep.hasClass("9")){
         melody.releaseAll();
-        melody.triggerAttack("A3");
+        melody.triggerAttack("F3");
       }
 
       let bassStep = $(".bass .step:nth-child(" + (step+1) + ")");
