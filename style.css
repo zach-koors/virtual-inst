@@ -43,9 +43,7 @@ button:active{
 
 }
 footer{
-  position: sticky;
   bottom: 0px;
   background-color: black;
-  padding-top: .5rem;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
 }
