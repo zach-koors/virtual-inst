@@ -182,7 +182,7 @@ $(document).ready(function() {
         hihat.start();
       }
       if(hihatStep.hasClass("on-loud")){
-        hihat.volume.value = -6;
+        hihat.volume.value = -9;
         hihat.stop();
         hihat.start();
       }
