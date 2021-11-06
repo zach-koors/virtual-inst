@@ -170,7 +170,7 @@ $(document).ready(function() {
         snare.start();
       }
       if(snareStep.hasClass("on-loud")){
-        snare.volume.value = -6;
+        snare.volume.value = -9;
         snare.stop();
         snare.start();
       }
