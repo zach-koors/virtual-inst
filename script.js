@@ -248,6 +248,14 @@ $(document).ready(function() {
       })
     });
 
+    $("#save").click(() => {
+      const steps = Array.from($('.step'));
+      let stepStates = steps.map( element => {
+        return element.className;
+      })
+      console.log(stepStates);
+    });
+
   };
 
   sequencer();
