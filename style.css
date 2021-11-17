@@ -10,7 +10,7 @@ body{
 }
 #main-div{
   background-color: #141a24;
-  border: 1px solid rgb(80, 80, 80);
+  border: 5px solid rgb(49, 49, 49);
   border-radius: 1em;
   box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, .2);
   padding: 1rem;
