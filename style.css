@@ -27,6 +27,9 @@ button{
   color: #3a3a3a;
   background-color: #101010;
 }
+.step{
+  width: 10%;
+}
 .off{
   font-size: .75rem;
 }
