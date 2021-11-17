@@ -4,8 +4,16 @@ html, body{
 body{
   position: relative;
   font-family: 'Press Start 2P', cursive;
-  background-color: black;
-  color: white;
+  background-color: rgb(207, 207, 207);
+  color: whitesmoke;
+  padding: 1rem;
+}
+#main-div{
+  background-color: #141a24;
+  border: 1px solid rgb(80, 80, 80);
+  border-radius: 1em;
+  box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, .2);
+  padding: 1rem;
 }
 h5{
   text-shadow: .25rem .25rem #3a3a3a;
@@ -45,6 +53,5 @@ button:active{
 }
 footer{
   bottom: 0px;
-  background-color: black;
   padding-bottom: 3rem;
 }
