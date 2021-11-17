@@ -20,15 +20,11 @@ h5{
 }
 button{
   touch-action: manipulation;
-  padding: 0, .25rem;
   box-shadow: 0 .25rem #3a3a3a;
   border-radius: .25rem;
   border-color: #3a3a3a;
   color: #3a3a3a;
   background-color: #101010;
-}
-.step{
-  width: 10%;
 }
 .off{
   font-size: .75rem;
