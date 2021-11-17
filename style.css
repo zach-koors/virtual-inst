@@ -25,6 +25,7 @@ button{
   border-color: #3a3a3a;
   color: #3a3a3a;
   background-color: #101010;
+  margin: .25rem;
 }
 .off{
   font-size: .75rem;
