@@ -20,7 +20,7 @@ h5{
 }
 button{
   touch-action: manipulation;
-  padding: 0, .1rem;
+  padding: 0, .25rem;
   box-shadow: 0 .25rem #3a3a3a;
   border-radius: .25rem;
   border-color: #3a3a3a;
