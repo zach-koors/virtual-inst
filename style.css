@@ -12,7 +12,7 @@ body{
   background-color: #141a24;
   border: 5px solid rgb(49, 49, 49);
   border-radius: 1em;
-  box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, .2);
+  box-shadow: 6px 6px 2px 1px rgba(0, 0, 255, .2);
   padding: 1rem;
 }
 h5{
@@ -52,8 +52,18 @@ button:active{
 }
 footer{
   bottom: 0px;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
 }
-#save{
-  
+.save-form{
+  margin-top: 1rem;
+  touch-action: manipulation;
+  box-shadow: 6px 6px 2px 1px rgba(0, 0, 255, .2);
+  border-radius: .5rem;
+  border: 3px solid #141a24;
+  background-color: whitesmoke;
+  color: #141a24;
+}
+.form input{
+  width: 100%;
+  margin-right: .5rem;
 }
