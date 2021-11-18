@@ -19,6 +19,9 @@ h5{
   text-shadow: .25rem .25rem #3a3a3a;
 }
 button{
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
   touch-action: manipulation;
   box-shadow: 0 .25rem #3a3a3a;
   border-radius: .25rem;
