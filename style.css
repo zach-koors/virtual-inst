@@ -19,8 +19,10 @@ h5{
   text-shadow: .25rem .25rem #3a3a3a;
 }
 button{
-  -webkit-padding-start: .5em;
-  -webkit-padding-end: .5em;
+  -webkit-padding-start: .65rem;
+  -webkit-padding-end: .65rem;
+  -webkit-padding-before: .25em;
+  -webkit-padding-after: .25em;
   touch-action: manipulation;
   width: auto;
   box-shadow: rgba(48, 48, 48, 0.4) 0px 2px 4px, rgba(48, 48, 48, 0.3) 0px 7px 13px -3px, rgba(58, 58, 58, 0.2) 0px -3px 0px inset;
