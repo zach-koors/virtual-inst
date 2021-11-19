@@ -20,7 +20,8 @@ h5{
 }
 button{
   touch-action: manipulation;
-  box-shadow: 0 .25rem #3a3a3a;
+  width: auto;
+  box-shadow: rgba(48, 48, 48, 0.4) 0px 2px 4px, rgba(48, 48, 48, 0.3) 0px 7px 13px -3px, rgba(58, 58, 58, 0.2) 0px -3px 0px inset;
   border-radius: .25rem;
   border-color: #3a3a3a;
   color: #3a3a3a;
