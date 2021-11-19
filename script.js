@@ -63,21 +63,25 @@ $(document).ready(function() {
   function sequencer() {
 
     //the instrument/player constants
-    const kick = new Tone.Player("./sounds/kick2.wav").toDestination();
-    const snare = new Tone.Player("./sounds/snare2.wav").toDestination();
+    // const pitchShift = new Tone.PitchShift().toDestination();
+    // pitchShift.pitch = -3;
+    const kick = new Tone.Player("./sounds/kick.m4a").toDestination();
+    const snare = new Tone.Player("./sounds/snare.m4a").toDestination();
     const hihat = new Tone.Player("./sounds/hihat2.wav").toDestination();
     const bass = new Tone.Sampler({
       urls: {
         A4: "./sounds/bass2.wav"
       }
     }).toDestination();
-    bass.volume.value = -12;
+    bass.volume.value = -6;
     const melody = new Tone.Sampler({
       urls: {
         C3: "./sounds/kalimba.wav"
       }
     }).toDestination();
-    melody.volume.value = -12;
+    melody.volume.value = -9;
+
+    
 
     let i = 0;
 
@@ -153,12 +157,12 @@ $(document).ready(function() {
 
       let kickStep = $(".kick .step:nth-child(" + (step+1) + ")");
       if(kickStep.hasClass("on")){
-        kick.volume.value = -18;
+        kick.volume.value = -15;
         kick.stop();
         kick.start();
       }
       if(kickStep.hasClass("on-loud")){
-        kick.volume.value = -6;
+        kick.volume.value = -9;
         kick.stop();
         kick.start();
       }
@@ -170,7 +174,7 @@ $(document).ready(function() {
         snare.start();
       }
       if(snareStep.hasClass("on-loud")){
-        snare.volume.value = -9;
+        snare.volume.value = -12;
         snare.stop();
         snare.start();
       }
