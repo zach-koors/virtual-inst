@@ -73,7 +73,7 @@ $(document).ready(function() {
         A4: "./sounds/bass2.wav"
       }
     }).toDestination();
-    bass.volume.value = -6;
+    bass.volume.value = -3;
     const melody = new Tone.Sampler({
       urls: {
         C3: "./sounds/kalimba.wav"
