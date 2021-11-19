@@ -19,8 +19,8 @@ h5{
   text-shadow: .25rem .25rem #3a3a3a;
 }
 button{
-  -webkit-padding-start: .65rem;
-  -webkit-padding-end: .65rem;
+  -webkit-padding-start: .5rem;
+  -webkit-padding-end: .5rem;
   -webkit-padding-before: .25em;
   -webkit-padding-after: .25em;
   touch-action: manipulation;
