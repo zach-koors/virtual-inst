@@ -73,13 +73,13 @@ $(document).ready(function() {
         A4: "./sounds/bass2.wav"
       }
     }).toDestination();
-    bass.volume.value = -3;
+    bass.volume.value = -4.5;
     const melody = new Tone.Sampler({
       urls: {
         C3: "./sounds/kalimba.wav"
       }
     }).toDestination();
-    melody.volume.value = -9;
+    melody.volume.value = -6;
 
     
 
@@ -157,7 +157,7 @@ $(document).ready(function() {
 
       let kickStep = $(".kick .step:nth-child(" + (step+1) + ")");
       if(kickStep.hasClass("on")){
-        kick.volume.value = -15;
+        kick.volume.value = -18;
         kick.stop();
         kick.start();
       }
@@ -207,60 +207,63 @@ $(document).ready(function() {
 
     //defining that the transport will loop through 8 steps
     Tone.Transport.scheduleRepeat(loopThroughSteps, "8n");
-  
-    
-    //play button starts/stops the transport
-    $("#play").click(function(){
-      if ($(this).hasClass('text-secondary')){
-        startTransport();
-        $(this).removeClass('text-secondary').addClass('text-white');
-      } else {
-        stopTransport();
-        $(this).removeClass('text-white').addClass('text-secondary');
-      }
-    });
-
-
-    //when 16ths button is pressed, the steps are converted to 16th notes (double time)
-    $("#time-signature").click(function(){
-      if ($(this).hasClass('text-secondary')){
-        Tone.Transport.bpm.value = Tone.Transport.bpm.value * 2;
-        $(this).removeClass('text-secondary').addClass('text-white');
-      } else {
-        Tone.Transport.bpm.value = Tone.Transport.bpm.value / 2;
-        $(this).removeClass('text-white').addClass('text-secondary');
-      }
-    });
-
-
-
-
-    $("#tempo").click(function(){
-      let tempoValues = [
-        '144bpm',
-        '160bpm',
-        '180bpm',
-        '72bpm',
-        '90bpm',
-        '108bpm',
-        '120bpm'
-      ];
-      $(this).each(function(){
-        this.textContent = tempoValues[($.inArray(this.textContent, tempoValues)+1)%tempoValues.length];
-        Tone.Transport.bpm.value = parseInt(tempoValues[($.inArray(this.textContent, tempoValues))%tempoValues.length], 10);
-        console.log(Tone.Transport.bpm.value + 'bpm');
-      })
-    });
-
-    $("#save").click(() => {
-      const steps = Array.from($('.step'));
-      let stepStates = steps.map( element => {
-        return element.className;
-      })
-      console.log(stepStates);
-    });
-
   };
+
+  //play button starts/stops the transport
+  $("#play").click(function(){
+    if ($(this).hasClass('text-secondary')){
+      startTransport();
+      $(this).removeClass('text-secondary').addClass('text-white');
+    } else {
+      stopTransport();
+      $(this).removeClass('text-white').addClass('text-secondary');
+    }
+  });
+
+
+  //when 16ths button is pressed, the steps are converted to 16th notes (double time)
+  $("#time-signature").click(function(){
+    if ($(this).hasClass('text-secondary')){
+      Tone.Transport.bpm.value = Tone.Transport.bpm.value * 2;
+      $(this).removeClass('text-secondary').addClass('text-white');
+    } else {
+      Tone.Transport.bpm.value = Tone.Transport.bpm.value / 2;
+      $(this).removeClass('text-white').addClass('text-secondary');
+    }
+  });
+
+  $("#tempo").click(function(){
+    let tempoValues = [
+      '144bpm',
+      '160bpm',
+      '180bpm',
+      '72bpm',
+      '90bpm',
+      '108bpm',
+      '120bpm'
+    ];
+    $(this).each(function(){
+      this.textContent = tempoValues[($.inArray(this.textContent, tempoValues)+1)%tempoValues.length];
+      Tone.Transport.bpm.value = parseInt(tempoValues[($.inArray(this.textContent, tempoValues))%tempoValues.length], 10);
+      console.log(Tone.Transport.bpm.value + 'bpm');
+    })
+  });
+
+  $("#save").click(() => {
+    const steps = Array.from($('.step'));
+    let stepStates = steps.map( element => {
+      return element.className;
+    })
+    console.log(stepStates);
+    
+    $("#lower-section").append($("<div></div>").text("Server Under Construction...").addClass("save-form p-2").attr('id', 'under-construction'));
+  });
+
+  $("#lower-section").click((event) => {
+    if(event.target.id === 'under-construction'){
+      $("#under-construction").remove();
+    };
+  });
 
   sequencer();
 
