@@ -256,7 +256,7 @@ $(document).ready(function() {
     })
     console.log(stepStates);
     
-    $("#lower-section").append($("<div></div>").text("Server Under Construction...").addClass("save-form p-2").attr('id', 'under-construction'));
+    $("#lower-section").append($("<div></div>").text("'Save' feature under construction...").addClass("save-form p-2").attr('id', 'under-construction'));
   });
 
   $("#lower-section").click((event) => {
